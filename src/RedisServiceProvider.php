@@ -24,9 +24,9 @@ class RedisServiceProvider extends ServiceProvider
 
             $repository = new Repository($store);
 
-            if ($this->app->bound('Illuminate\Contracts\Events\Dispatcher')) {
+            if ($app->bound('Illuminate\Contracts\Events\Dispatcher')) {
                 $repository->setEventDispatcher(
-                    $this->app['Illuminate\Contracts\Events\Dispatcher']
+                    $app['Illuminate\Contracts\Events\Dispatcher']
                 );
             }
 
