@@ -22,7 +22,7 @@ Install this package via Composer:
 composer require tillkruss/laravel-phpredis
 ```
 
-Then open your `app` configuration file and remove (or comment-out) the default redis service provider from your `providers` list:
+Then open your `app` configuration file and remove (or comment-out) the default Redis service provider from your `providers` list:
 
 ```
 // Illuminate\Redis\RedisServiceProvider::class,
