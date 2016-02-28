@@ -1,5 +1,9 @@
 # PHPRedis driver for Laravel 5.2+
 
+[![Build Status](https://travis-ci.org/tillkruss/laravel-phpredis.svg?branch=master)](https://travis-ci.org/tillkruss/laravel-phpredis)
+[![Latest Stable Version](https://poser.pugx.org/tillkruss/larvel-phpredis/v/stable)](https://packagist.org/packages/tillkruss/larvel-phpredis)
+[![License](https://poser.pugx.org/tillkruss/larvel-phpredis/license)](https://packagist.org/packages/tillkruss/larvel-phpredis)
+
 This package provides a drop-in replacement for Laravel's `RedisServiceProvider`, that adds compatibility for PHPRedis, the PCEL Redis Extension.
 
 PHPRedis does not support sharding, using the `cluster` option in your configuration will lead to an exception.
