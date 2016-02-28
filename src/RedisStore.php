@@ -17,7 +17,7 @@ class RedisStore extends Store
     {
         $value = $this->connection()->get($this->prefix.$key);
 
-        if (! is_null($value) || $value !== false) {
+        if (! is_null($value) && $value !== false) {
             return is_numeric($value) ? $value : unserialize($value);
         }
     }
