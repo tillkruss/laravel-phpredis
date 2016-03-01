@@ -9,6 +9,11 @@ use Illuminate\Redis\RedisServiceProvider as ServiceProvider;
 class RedisServiceProvider extends ServiceProvider
 {
     /**
+     * Don't defer the loadig of the service provider.
+     */
+    protected $defer = false;
+
+    /**
      * Register custom Redis cache driver.
      *
      * @return void
