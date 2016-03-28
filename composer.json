@@ -1,5 +1,5 @@
 {
-    "name": "tillkruss/larvel-phpredis",
+    "name": "tillkruss/laravel-phpredis",
     "description": "A Redis driver for Laravel 5 that adds compatibility for PHPRedis, the PCEL Redis Extension.",
     "keywords": ["laravel", "redis", "phpredis"],
     "license": "MIT",
