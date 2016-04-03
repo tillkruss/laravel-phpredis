@@ -1,8 +1,8 @@
 # PHPRedis driver for Laravel 5
 
 [![Build Status](https://travis-ci.org/tillkruss/laravel-phpredis.svg?branch=master)](https://travis-ci.org/tillkruss/laravel-phpredis)
-[![Latest Stable Version](https://poser.pugx.org/tillkruss/larvel-phpredis/v/stable)](https://packagist.org/packages/tillkruss/larvel-phpredis)
-[![License](https://poser.pugx.org/tillkruss/larvel-phpredis/license)](https://packagist.org/packages/tillkruss/larvel-phpredis)
+[![Latest Stable Version](https://poser.pugx.org/tillkruss/laravel-phpredis/v/stable)](https://packagist.org/packages/tillkruss/laravel-phpredis)
+[![License](https://poser.pugx.org/tillkruss/laravel-phpredis/license)](https://packagist.org/packages/tillkruss/laravel-phpredis)
 
 This package provides a drop-in replacement for Laravel's `RedisServiceProvider`, that adds compatibility for PHPRedis, the PCEL Redis Extension.
 
@@ -41,4 +41,4 @@ Make sure you already renamed or removed the alias for Redis in your `aliases` l
 
 ## License
 
-Laravel Socialite is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+This package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
