@@ -4,7 +4,7 @@ namespace TillKruss\LaravelPhpRedis;
 
 use Cache;
 use Illuminate\Support\Arr;
-use Illuminate\Redis\RedisServiceProvider as ServiceProvider;
+use Illuminate\Support\ServiceProvider;
 
 class RedisServiceProvider extends ServiceProvider
 {
@@ -49,5 +49,15 @@ class RedisServiceProvider extends ServiceProvider
         $this->app->singleton('redis', function ($app) {
             return new Database($app['config']['database.redis']);
         });
+    }
+
+    /**
+     * Get the services provided by the provider.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return ['redis'];
     }
 }
