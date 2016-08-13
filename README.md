@@ -1,4 +1,4 @@
-# PhpRedis driver for Laravel 5
+# PhpRedis driver for Laravel & Lumen
 
 [![Build Status](https://travis-ci.org/tillkruss/laravel-phpredis.svg?branch=master)](https://travis-ci.org/tillkruss/laravel-phpredis)
 [![Latest Stable Version](https://poser.pugx.org/tillkruss/laravel-phpredis/v/stable)](https://packagist.org/packages/tillkruss/laravel-phpredis)
