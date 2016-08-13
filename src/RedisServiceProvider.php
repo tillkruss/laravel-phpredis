@@ -1,6 +1,6 @@
 <?php
 
-namespace TillKruss\LaravelPHPRedis;
+namespace TillKruss\LaravelPhpRedis;
 
 use Cache;
 use Illuminate\Support\Arr;

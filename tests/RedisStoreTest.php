@@ -20,8 +20,8 @@ class RedisStoreTest extends PHPUnit_Framework_TestCase
 
     protected function redisStore()
     {
-        return new TillKruss\LaravelPHPRedis\RedisStore(
-            Mockery::mock('TillKruss\LaravelPHPRedis\Database')
+        return new TillKruss\LaravelPhpRedis\RedisStore(
+            Mockery::mock('TillKruss\LaravelPhpRedis\Database')
         );
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace TillKruss\LaravelPHPRedis;
+namespace TillKruss\LaravelPhpRedis;
 
 use Illuminate\Cache\TagSet;
 use Illuminate\Cache\RedisStore as Store;
@@ -26,7 +26,7 @@ class RedisStore extends Store
      * Begin executing a new tags operation.
      *
      * @param  array|mixed  $names
-     * @return \TillKruss\LaravelPHPRedis\RedisTaggedCache
+     * @return \TillKruss\LaravelPhpRedis\RedisTaggedCache
      */
     public function tags($names)
     {

@@ -60,8 +60,8 @@ class RepositoryTest extends PHPUnit_Framework_TestCase
 
     protected function repository()
     {
-        return new TillKruss\LaravelPHPRedis\Repository(
-            Mockery::mock('TillKruss\LaravelPHPRedis\RedisStore')
+        return new TillKruss\LaravelPhpRedis\Repository(
+            Mockery::mock('TillKruss\LaravelPhpRedis\RedisStore')
         );
     }
 }
