@@ -22,13 +22,26 @@ class Database extends BaseDatabase implements DatabaseContract
 
         foreach ($servers as $key => $server) {
             $client = new Redis();
-            $client->connect($server['host'], $server['port']);
 
-            if (isset($server['password'])) {
+            $timeout = empty($server['timeout']) ? 0 : $server['timeout'];
+
+            if (isset($server['persistent']) && $server['persistent']) {
+                $client->pconnect($server['host'], $server['port'], $timeout);
+            } else {
+                $client->connect($server['host'], $server['port'], $timeout);
+            }
+
+            if (! empty($server['prefix'])) {
+                $redis->setOption(Redis::OPT_PREFIX, $server['prefix']);
+            }
+
+            if (! empty($server['password'])) {
                 $client->auth($server['password']);
             }
 
-            $client->select($server['database']);
+            if (! empty($server['database'])) {
+                $client->select($server['database']);
+            }
 
             $clients[$key] = $client;
         }
