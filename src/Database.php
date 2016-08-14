@@ -50,12 +50,12 @@ class Database extends BaseDatabase implements DatabaseContract
     }
 
     /**
-    * Create a new aggregate client supporting sharding.
-    *
-    * @param  array  $servers
-    * @param  array  $options
-    * @return array
-    */
+     * Create a new aggregate client supporting sharding.
+     *
+     * @param  array  $servers
+     * @param  array  $options
+     * @return array
+     */
     protected function createAggregateClient(array $servers, array $options = [])
     {
         $servers = array_map([$this, 'buildClusterSeed'], $servers);
@@ -69,11 +69,11 @@ class Database extends BaseDatabase implements DatabaseContract
     }
 
     /**
-    * Build a cluster seed string.
-    *
-    * @param  array  $server
-    * @return string
-    */
+     * Build a cluster seed string.
+     *
+     * @param  array  $server
+     * @return string
+     */
     protected function buildClusterSeed($server)
     {
         $parameters = [];
