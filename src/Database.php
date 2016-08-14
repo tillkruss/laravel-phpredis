@@ -64,7 +64,7 @@ class Database extends BaseDatabase implements DatabaseContract
         $persistent = isset($options['persistent']) && $options['persistent'];
 
         return ['default' => new RedisCluster(
-            null, array_values($servers), $timeout, NULL, $persistent
+            null, array_values($servers), $timeout, null, $persistent
         )];
     }
 
@@ -88,6 +88,6 @@ class Database extends BaseDatabase implements DatabaseContract
             $parameters['auth'] = $server['password'];
         }
 
-        return $server['host'] . ':' . $server['port'] . '?' . http_build_query($parameters);
+        return $server['host'].':'.$server['port'].'?'.http_build_query($parameters);
     }
 }
