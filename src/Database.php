@@ -3,7 +3,7 @@
 namespace TillKruss\LaravelPhpRedis;
 
 use Redis;
-use BadMethodCallException;
+use RedisCluster;
 use Illuminate\Redis\Database as BaseDatabase;
 use Illuminate\Contracts\Redis\Database as DatabaseContract;
 
@@ -50,16 +50,42 @@ class Database extends BaseDatabase implements DatabaseContract
     }
 
     /**
-     * Create a new aggregate client supporting sharding.
-     * Throws exception, since PHPRedis doesn't support client sharding.
-     *
-     * @param  array  $servers
-     * @param  array  $options
-     *
-     * @throws BadMethodCallException
-     */
+    * Create a new aggregate client supporting sharding.
+    *
+    * @param  array  $servers
+    * @param  array  $options
+    */
     protected function createAggregateClient(array $servers, array $options = [])
     {
-        throw new BadMethodCallException('PHPRedis does not support sharding.');
+        $servers = array_map([$this, 'buildClusterSeed'], $servers);
+
+        $timeout = empty($options['timeout']) ? 0 : $options['timeout'];
+        $persistent = isset($options['persistent']) && $options['persistent'];
+
+        return ['default' => new RedisCluster(
+            null, array_values($servers), $timeout, NULL, $persistent
+        )];
+    }
+
+    /**
+    * Build a cluster seed string.
+    *
+    * @param  array  $server
+    */
+    protected function buildClusterSeed($server)
+    {
+        $parameters = [];
+
+        foreach (['database', 'timeout', 'prefix'] as $parameter) {
+            if (! empty($server[$parameter])) {
+                $parameters[$parameter] = $server[$parameter];
+            }
+        }
+
+        if (! empty($server['password'])) {
+            $parameters['auth'] = $server['password'];
+        }
+
+        return $server['host'] . ':' . $server['port'] . '?' . http_build_query($parameters);
     }
 }
