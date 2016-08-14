@@ -8,7 +8,6 @@ This package provides a drop-in replacement for Laravel’s and Lumen’s `Redis
 
 Using PhpRedis instead of Predis with Laravel’s default `RedisServiceProvider` will result in false-positives across the framework, because PhpRedis returns `false` instead of `null` if a key does not exist.
 
-*Note: PhpRedis does not support sharding, using the `cluster` option in your configuration will lead to an exception.*
 
 ## Requirements
 
