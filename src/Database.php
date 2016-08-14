@@ -32,7 +32,7 @@ class Database extends BaseDatabase implements DatabaseContract
             }
 
             if (! empty($server['prefix'])) {
-                $redis->setOption(Redis::OPT_PREFIX, $server['prefix']);
+                $client->setOption(Redis::OPT_PREFIX, $server['prefix']);
             }
 
             if (! empty($server['password'])) {
@@ -54,6 +54,7 @@ class Database extends BaseDatabase implements DatabaseContract
     *
     * @param  array  $servers
     * @param  array  $options
+    * @return array
     */
     protected function createAggregateClient(array $servers, array $options = [])
     {
@@ -71,6 +72,7 @@ class Database extends BaseDatabase implements DatabaseContract
     * Build a cluster seed string.
     *
     * @param  array  $server
+    * @return string
     */
     protected function buildClusterSeed($server)
     {
