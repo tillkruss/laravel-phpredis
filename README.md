@@ -11,9 +11,11 @@ Using PhpRedis instead of Predis with Laravel’s default `RedisServiceProvider`
 
 ## Requirements
 
-- PHP 5.5.9
-- Laravel 5.2
-- PhpRedis
+- PHP 5.5.9+
+- Laravel 5.1+
+- Lumen 5.1+
+- PhpRedis 2.2.8+
+
 
 ## Laravel Installation
 
