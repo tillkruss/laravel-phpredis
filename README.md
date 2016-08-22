@@ -4,7 +4,7 @@
 [![Latest Stable Version](https://poser.pugx.org/tillkruss/laravel-phpredis/v/stable)](https://packagist.org/packages/tillkruss/laravel-phpredis)
 [![License](https://poser.pugx.org/tillkruss/laravel-phpredis/license)](https://packagist.org/packages/tillkruss/laravel-phpredis)
 
-This package provides a drop-in replacement for Laravel’s and Lumen’s `RedisServiceProvider`, that adds compatibility for PhpRedis, the PCEL Redis Extension.
+This package provides a drop-in replacement for Laravel’s and Lumen’s `RedisServiceProvider`, that adds compatibility for PhpRedis, the PECL Redis Extension.
 
 Using PhpRedis instead of Predis with Laravel’s default `RedisServiceProvider` will result in false-positives across the framework, because PhpRedis returns `false` instead of `null` if a key does not exist.
 

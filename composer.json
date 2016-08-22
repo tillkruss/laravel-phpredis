@@ -1,6 +1,6 @@
 {
     "name": "tillkruss/laravel-phpredis",
-    "description": "A Redis driver for Laravel and Lumen that works with PhpRedis, the PCEL Redis Extension.",
+    "description": "A Redis driver for Laravel and Lumen that works with PhpRedis, the PECL Redis Extension.",
     "keywords": ["laravel", "redis", "phpredis"],
     "license": "MIT",
     "authors": [
