@@ -37,7 +37,7 @@ Next, register the new service provider by adding it to the end of your `provide
 TillKruss\LaravelPhpRedis\RedisServiceProvider::class,
 ```
 
-Finally, fake sure you already renamed or removed the alias for Redis in your `aliases` list.
+Finally, make sure you already renamed or removed the alias for Redis in your `aliases` list.
 
 
 ## Lumen Installation
